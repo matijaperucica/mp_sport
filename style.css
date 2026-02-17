@@ -326,3 +326,20 @@ background-color: #ff8800;
     height: 35px; /* Malo manja visina za PayU ako je potrebno */
     /* Možete prilagoditi ovo ako PayU logo izgleda neproporcionalno sa 40px visine */
 }
+
+.clock-container {
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+        font-size: 14px;
+        min-width: 200px; /* Sprječava skakanje sadržaja */
+        color: white;
+    }
+
+    .fade-in {
+        transition: opacity 0.5s ease-in-out;
+        color: white;
+    }
+
+    .hidden {
+        opacity: 0;
+    }

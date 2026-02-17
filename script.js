@@ -40,3 +40,38 @@ function topFunction() {
     });
 }
 
+
+
+    let showDate = true;
+
+    function updateDisplay() {
+        const display = document.getElementById('dynamic-clock');
+        const now = new Date();
+
+        // Prvo bacimo "fade out" efekt
+        display.classList.add('hidden');
+
+        setTimeout(() => {
+            if (showDate) {
+                // Prikaz datuma: npr. uto, 17.02.2026.
+                const dateOptions = { weekday: 'short', day: '2-digit', month: '2-digit', year: 'numeric' };
+                display.textContent = now.toLocaleDateString('hr-HR', dateOptions);
+            } else {
+                // Prikaz vremena: npr. 20:45:12
+                display.textContent = now.toLocaleTimeString('hr-HR');
+            }
+            
+            // Vratimo vidljivost
+            display.classList.remove('hidden');
+            // Promijenimo stanje za idući ciklus
+            showDate = !showDate;
+        },100); // Pola sekunde traje animacija nestajanja
+    }
+
+    // Mijenjaj prikaz svake 3 sekunde
+    setInterval(updateDisplay, 3000);
+
+    // Pokreni odmah prvi put
+    updateDisplay();
+
+
