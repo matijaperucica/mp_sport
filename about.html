@@ -13,6 +13,8 @@
     <!-- Tvoj CSS (možeš dodati custom stilove ovdje ili u style.css) -->
     <link rel="stylesheet" href="style.css">
     <style>
+    
+
         :root {
             --primary: #fd7e14;
             /* glavna narandžasta */
@@ -62,7 +64,7 @@
 <body>
 
     <div class="content">
-
+  
         <!-- NAVBAR ZA DRUŠTVENE MREŽE (mali top bar) -->
         <nav class="navbar navbar-expand-lg navbar-light w-100" style="height: 30px; background-color: #f8f9fa;">
             <div class="container">
@@ -269,6 +271,12 @@
 
     <!-- Tvoj JS fajl (ako imaš) -->
     <script src="script.js"></script>
+</body>
+
+</html>
+        <script> function updateClock() { const now = new Date(); const days = ["Nedjelja", "Ponedjeljak", "Utorak", "Srijeda", "Četvrtak", "Petak", "Subota"]; const day = days[now.getDay()]; let d = now.getDate().toString().padStart(2, '0'); let m = (now.getMonth() + 1).toString().padStart(2, '0'); let y = now.getFullYear(); let h = now.getHours().toString().padStart(2, '0'); let min = now.getMinutes().toString().padStart(2, '0'); let s = now.getSeconds().toString().padStart(2, '0'); document.getElementById("clock").innerHTML = `${day} | ${d}.${m}.${y} | ${h}:${min}:${s}`; } setInterval(updateClock, 1000); updateClock(); </script>
+
+    </div>
 </body>
 
 </html>

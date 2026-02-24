@@ -74,4 +74,3 @@ function topFunction() {
     // Pokreni odmah prvi put
     updateDisplay();
 
-
