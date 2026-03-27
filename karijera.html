@@ -69,80 +69,100 @@
             </div>
         </nav>
     </div>
-    
-    <!-- CONTACT SECTION -->
-    <section class="contact-section py-5 bg-light">
-        <div class="container">
-            <h2 class="text-center mb-5">Kontaktirajte nas</h2>
+    <!-- === OGLASI ZA POSAO === -->
+<div class="container mt-5">
+    <h2 class="mb-4 text-center fw-bold">
+        <i class="fas fa-briefcase"></i> Oglasi za posao
+    </h2>
 
-            <div class="row g-4">
-                <!-- Podaci o firmi / Kontakt -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body">
-                            <h3 class="card-title mb-4">Podaci o firmi</h3>
-                            <p><strong>MP Sport</strong></p>
-                            <p>Adresa: Dečanska 15, Sarajevo</p>
-                            <p>Broj telefona: <a href="tel:+38765147201">065 147 201</a></p>
-                            <p>Email: <a href="matijaperucica@gmail.com">matijaperucica@gmail.com</a></p>
-                            <hr>
-                            <h5>Radno vrijeme</h5>
-                            <p>PON – PET: 10:00 – 22:00</p>
-                            <p>SUB: 10:00 – 22:00</p>
-                            <p>NED: Zatvoreno</p> <!-- dodao sam nedjelju jer nije navedena -->
-                        </div>
-                    </div>
+    <div class="row g-4" id="jobListings">
+        
+        <!-- Oglas 1 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 job-card" data-job-id="1">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">Prodavač / Prodavačica sportske opreme</h5>
                 </div>
-
-                <!-- Google Maps -->
-                <div class="col-lg-4 col-md-6">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body d-flex flex-column">
-                            <h3 class="card-title mb-4">Naša lokacija</h3>
-                            <div class="flex-grow-1">
-                                <iframe
-                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9474.047860752364!2d18.354050118249237!3d43.81616568196758!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4758c952060bd1b5%3A0x43de98f58d63e66f!2sEdukativni%20centar%20Big%20Ben!5e1!3m2!1shr!2sba!4v1760120072102!5m2!1shr!2sba"
-                                    width="100%" height="100%" style="border:0; min-height: 300px;" allowfullscreen=""
-                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-                                </iframe>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-body">
+                    <p><strong>Lokacija:</strong> Sarajevo, Dečanska 15</p>
+                    <p><strong>Tip zaposlenja:</strong> Punо radno vrijeme</p>
+                    <p><strong>Plata:</strong> 1.200 - 1.600 KM + provizija</p>
+                    
+                    <hr>
+                    <h6>Zahtjevi:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success"></i> Iskustvo u prodaji (poželjno)</li>
+                        <li><i class="fas fa-check text-success"></i> Poznavanje sportske opreme i NBA</li>
+                        <li><i class="fas fa-check text-success"></i> Ljubaznost i komunikativnost</li>
+                        <li><i class="fas fa-check text-success"></i> Rad u smjenama</li>
+                    </ul>
                 </div>
-
-                <!-- Kontakt forma -->
-                <div class="col-lg-4">
-                    <div class="card h-100 shadow-sm border-0">
-                        <div class="card-body">
-                            <h3 class="card-title mb-4">Pošaljite nam poruku</h3>
-                            <form>
-                                <div class="mb-3">
-                                    <label for="ime" class="form-label">Vaše ime</label>
-                                    <input type="text" class="form-control" id="ime" placeholder="Unesite vaše ime"
-                                        required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Vaš e-mail</label>
-                                    <input type="email" class="form-control" id="email"
-                                        placeholder="example.123@gmail.com" required>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="poruka" class="form-label">Poruka</label>
-                                    <textarea class="form-control" id="poruka" rows="5" placeholder="Vaša poruka..."
-                                        required></textarea>
-                                </div>
-
-                                <button type="submit" class="btn btn-success w-100">Pošalji poruku</button>
-                            </form>
-                        </div>
-                    </div>
+                <div class="card-footer bg-light">
+                    <button onclick="applyForJob(1)" class="btn btn-success w-100">
+                        <i class="fas fa-paper-plane"></i> Apliciraj odmah
+                    </button>
                 </div>
             </div>
         </div>
-    </section>
 
+        <!-- Oglas 2 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 job-card" data-job-id="2">
+                <div class="card-header bg-success text-white">
+                    <h5 class="mb-0">Vozač / Dostavljač (terensko vozilo)</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Lokacija:</strong> Sarajevo i okolica</p>
+                    <p><strong>Tip zaposlenja:</strong> Punо radno vrijeme / Fleksibilno</p>
+                    <p><strong>Plata:</strong> 1.100 - 1.500 KM + naknada za gorivo</p>
+                    
+                    <hr>
+                    <h6>Zahtjevi:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success"></i> Vozačka dozvola B kategorije (min. 2 godine)</li>
+                        <li><i class="fas fa-check text-success"></i> Poznavanje grada Sarajeva</li>
+                        <li><i class="fas fa-check text-success"></i> Odgovornost i pouzdanost</li>
+                        <li><i class="fas fa-check text-success"></i> Rad sa kupcima</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-light">
+                    <button onclick="applyForJob(2)" class="btn btn-success w-100">
+                        <i class="fas fa-paper-plane"></i> Apliciraj odmah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Oglas 3 -->
+        <div class="col-lg-4 col-md-6">
+            <div class="card h-100 shadow-sm border-0 job-card" data-job-id="3">
+                <div class="card-header bg-warning text-dark">
+                    <h5 class="mb-0">Marketing asistent / Content creator</h5>
+                </div>
+                <div class="card-body">
+                    <p><strong>Lokacija:</strong> Sarajevo (hibridno)</p>
+                    <p><strong>Tip zaposlenja:</strong> Punо radno vrijeme</p>
+                    <p><strong>Plata:</strong> 1.000 - 1.400 KM</p>
+                    
+                    <hr>
+                    <h6>Zahtjevi:</h6>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check text-success"></i> Iskustvo sa društvenim mrežama (Instagram, TikTok)</li>
+                        <li><i class="fas fa-check text-success"></i> Kreativnost i osjećaj za sportski sadržaj</li>
+                        <li><i class="fas fa-check text-success"></i> Poznavanje Canve / Photoshop-a (poželjno)</li>
+                        <li><i class="fas fa-check text-success"></i> Dobro poznavanje engleskog jezika</li>
+                    </ul>
+                </div>
+                <div class="card-footer bg-light">
+                    <button onclick="applyForJob(3)" class="btn btn-success w-100">
+                        <i class="fas fa-paper-plane"></i> Apliciraj odmah
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 
     <!-- FOOTER -->
@@ -205,6 +225,28 @@
             </div>
         </div>
     </div>
-</body>
+<script>
+// Funkcija za apliciranje na posao
+function applyForJob(jobId) {
+    const jobs = {
+        1: "Prodavač / Prodavačica sportske opreme",
+        2: "Vozač / Dostavljač",
+        3: "Marketing asistent / Content creator"
+    };
 
-</html>
+    const jobTitle = jobs[jobId];
+    
+    const name = prompt("Unesite Vaše ime i prezime:");
+    if (!name) return;
+
+    const email = prompt("Unesite Vaš email:");
+    if (!email) return;
+
+    const phone = prompt("Unesite Vaš broj telefona (opciono):");
+
+    alert(`✅ Hvala ${name}!\n\nVaša prijava za poziciju "${jobTitle}" je uspješno poslana.\n\nKontaktirat ćemo Vas uskoro na ${email}.`);
+    
+    // Ovdje možeš kasnije dodati slanje na email ili backend
+    console.log(`Prijava za posao ${jobId} - ${jobTitle} od ${name} (${email})`);
+}
+</script>

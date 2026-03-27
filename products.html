@@ -726,16 +726,13 @@
 
 
 <script>
-// Sve kartice spremamo u niz
 let allProducts = [];
 
-// Kad se stranica učita
 document.addEventListener('DOMContentLoaded', function() {
     const productsContainer = document.getElementById('productsContainer');
     const categoryFilter = document.getElementById('categoryFilter');
     const sortPrice = document.getElementById('sortPrice');
 
-    // Uzimamo sve postojeće kartice iz HTML-a i spremamo ih
     function collectProducts() {
         allProducts = Array.from(document.querySelectorAll('.col-md-3[data-category]'));
         
@@ -748,8 +745,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Funkcija za filtriranje i sortiranje
     function filterAndSortProducts() {
         let filtered = allProducts;
-
-        // Filtriranje po kategoriji
         const selectedCategory = categoryFilter.value;
         if (selectedCategory !== 'all') {
             filtered = allProducts.filter(card => 
@@ -757,7 +752,6 @@ document.addEventListener('DOMContentLoaded', function() {
             );
         }
 
-        // Sortiranje po cijeni
         const sortValue = sortPrice.value;
         
         if (sortValue !== 'default') {
@@ -774,21 +768,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
 
-        // Prikazujemo filtrirane i sortirane kartice
         productsContainer.innerHTML = '';
         filtered.forEach(card => {
             productsContainer.appendChild(card);
         });
     }
 
-    // Pokrećemo prikupljanje kartica
     collectProducts();
 
-    // Event listeneri
     categoryFilter.addEventListener('change', filterAndSortProducts);
     sortPrice.addEventListener('change', filterAndSortProducts);
 
-    // Početni prikaz
     filterAndSortProducts();
 });
 </script>
