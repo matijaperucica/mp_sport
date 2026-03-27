@@ -69,32 +69,58 @@
             </div>
         </nav>
     </div>
-    
+
 
 
     <div class="container mt-5">
-                <div class="row mt-3">
-            <div class="col-md-3" data-category="lopte">
+
+        <!-- Filter i Sort sekcija -->
+        <div class="row mb-4">
+            <div class="col-md-6">
+                <label for="categoryFilter" class="form-label fw-bold">Filtriraj po kategoriji:</label>
+                <select id="categoryFilter" class="form-select">
+                    <option value="all">Sve kategorije</option>
+                    <option value="dresovi">Dresovi</option>
+                    <option value="slike">Slike</option>
+                    <option value="allstar">All-Star stvari</option>
+                </select>
+            </div>
+
+            <div class="col-md-6">
+                <label for="sortPrice" class="form-label fw-bold">Sortiraj po cijeni:</label>
+                <select id="sortPrice" class="form-select">
+                    <option value="default">Default (kako su dodani)</option>
+                    <option value="price-low">Cijena: Najniža prvo</option>
+                    <option value="price-high">Cijena: Najviša prvo</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- Proizvodi -->
+        <div id="productsContainer" class="row mt-3">
+            <!-- Ovdje se dinamički ubacuju sve kartice preko JavaScripta -->
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-success mb-2">LOPTE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/spalding-2025-euroleague-teamball-real-madrid-rubber-indooroutdoor-basketball-6842210_460x.jpg?v=1758810962"
-                        class="card-img-top" alt="Košarkaška lopta REAL MADRIDA">
+                    <span class="badge bg-success mb-2">DRESOVI</span>
+                    <img src=https://images.footballfanatics.com/denver-nuggets/denver-nuggets-nike-association-edition-swingman-jersey-white-nikola-joki%C4%87-unisex_ss4_p-13348808+u-rfcis36k367hv1l7oc12+v-10d7f9d2c92d402ea4b4f4a61aa957a4.jpg?_hv=2&w=600
+                        class="card-img-top" alt="Kupite dres Nikola Jokić(JOKER)">
                     <div class="card-body">
-                        <h5 class="card-title">Košarkaška lopta REAL MADRIDA</h5>
+                        <h5 class="card-title">Kupite dres Nikola Jokić(JOKER)</h5>
                         <p class="card-text">
-                            Vježbajte šut sa loptom jednim od najboljih klubova u istoriji Evrolige
+                            Nikola Jokić
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 200 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 800 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                 <div class="col-md-3" data-category="dresovi "></div>
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-success mb-2">DRESOVI </span>
+                    <span class="badge bg-success mb-2">DRESOVI </span>
                     <img src=https://images.footballfanatics.com/los-angeles-lakers/los-angeles-lakers-nike-icon-swingman-jersey-luka-doncic-unisex_ss5_p-203110263+u-mrrif90hov3qnmrr7spm+v-c9ykpqkix9p6udiutuki.jpg?_hv=2&w=600
                         class="card-img-top" alt="Kupite dres najboljeg slovenskog košarkaša ">
                     <div class="card-body">
@@ -109,8 +135,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                  <div class="col-md-3" data-category="dresovi"></div>
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
                     <span class="badge bg-success mb-2">DRESOVI</span>
                     <img src=https://images.footballfanatics.com/golden-state-warriors/golden-state-warriors-nike-select-series-swingman-jersey-stephen-curry-mens_ss5_p-200819726+u-2c7hfkq4liiwijjukzrp+v-7ogo76cwpklx9bhhwru0.jpg?_hv=2&w=600
@@ -127,8 +152,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                 <div class="col-md-3" data-category="Dresovi"></div>
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
                     <span class="badge bg-success mb-2">DRESOVI</span>
                     <img src=https://images.footballfanatics.com/minnesota-timberwolves/minnesota-timberwolves-nike-icon-edition-swingman-jersey-navy-anthony-edwards-unisex_ss5_p-13349400+u-spw1pyfyyqlhmamduauw+v-bpnnqz5j5t6w124fgoh1.jpg?_hv=2&w=600
@@ -136,7 +160,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Kupite najpovoljniji dres Anthony Edwardsa</h5>
                         <p class="card-text">
-                            Anthony Edwards 
+                            Anthony Edwards
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
                             <span class="fw-bold text-primary">Cijena: 400 KM</span>
@@ -146,74 +170,71 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="row mt-3">
-            <div class="col-md-3" data-category="lopte">
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-success mb-2">LOPTE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/spalding-2025-euroleague-teamball-real-madrid-rubber-indooroutdoor-basketball-6842210_460x.jpg?v=1758810962"
-                        class="card-img-top" alt="Košarkaška lopta REAL MADRIDA">
+                    <span class="badge bg-success mb-2">DRESOVI</span>
+                    <img src=https://images.footballfanatics.com/oklahoma-city-thunder/oklahoma-city-thunder-nike-icon-edition-swingman-jersey-blue-shai-gilgeous-alexander-unisex_ss4_p-13349391+u-91tc7i2w91emvcjiytv0+v-e65ab5bf7e7444aeb5fa3ecfb1864ec7.jpg?_hv=2&w=600
+                        class="card-img-top" alt="Dres Shai Gigleous-Alexender">
                     <div class="card-body">
-                        <h5 class="card-title">Košarkaška lopta REAL MADRIDA</h5>
+                        <h5 class="card-title">Dres Shai Gigleous-Alexender</h5>
                         <p class="card-text">
-                            Vježbajte šut sa loptom jednim od najboljih klubova u istoriji Evrolige
+                            Shai Gigleous-Alexender
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 200 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                 <div class="col-md-3" data-category="lopte"></div>
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-success mb-2">LOPTE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/spalding-2025-euroleague-teamball-asvel-rubber-indooroutdoor-basketball-6686981_460x.jpg?v=1758810962"
-                        class="card-img-top" alt="Košarkaška lopta AVELA IZ LIONA">
+                    <span class="badge bg-success mb-2">DRESOVI</span>
+                    <img src=https://images.footballfanatics.com/los-angeles-lakers/los-angeles-lakers-nike-2025/26-city-edition-swingman-jersey-black-lebron-james-unisex_ss5_p-203568719+u-l8jjj2ahocfkdknejxpq+v-d6x3boka2pwnxosqpta9.jpg?_hv=2&w=600
+                        class="card-img-top" alt="Dres LeBrona James(KING of the basketball)">
                     <div class="card-body">
-                        <h5 class="card-title">Košarkaška lopta ASVELA IZ LIONA</h5>
+                        <h5 class="card-title">Dres LeBrona James(KING of the basketball)</h5>
                         <p class="card-text">
-                            Vježbajte dribling sa ovom sjajnom loptom
+                            LeBron James
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 150 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 650 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                  <div class="col-md-3" data-category="lopte"></div>
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
-                    <span class="badge bg-success mb-2">LOPTE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/spalding-2025-euroleague-teamball-barcelona-rubber-indooroutdoor-basketball-4161960_460x.jpg?v=1758810963"
-                        class="card-img-top" alt="Košarkaška lopta BARSELONE">
+                    <span class="badge bg-success mb-2">DRESOVI</span>
+                    <img src=https://images.footballfanatics.com/cleveland-cavaliers/cleveland-cavaliers-jordan-brand-statement-edition-swingman-jersey-black-james-harden-unisex_ss5_p-203863448+u-z8oi6hjktzwukv3vmwjy+v-zsserpsi28gbudvcy7nv.png?_hv=2&w=600
+                        class="card-img-top" alt="Dres James Hardena(KING of the step-back)">
                     <div class="card-body">
-                        <h5 class="card-title">Košarkaška lopta BARSELONE</h5>
+                        <h5 class="card-title">Dres James Hardena(KING of the step-back)</h5>
                         <p class="card-text">
-                            Vježbajte prodore sa ovom moćnom loptom
+                            James Harden
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 250 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 450 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                 <div class="col-md-3" data-category="lopte"></div>
+            <div class="col-md-3" data-category="dresovi">
                 <div class="card" style="width: 18rem;">
-                    <span class="badge bg-success mb-2">LOPTE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/spalding-2025-euroleague-teamball-baskonia-rubber-indooroutdoor-basketball-8809850_460x.jpg?v=1758810965"
-                        class="card-img-top" alt="Košarkaška lopta BASKONIE">
+                    <span class="badge bg-success mb-2">DRESOOVI</span>
+                    <img src=https://images.footballfanatics.com/indiana-pacers/indiana-pacers-icon-jersey-haliburton-0-unisex_ss5_p-202685706+u-gqzgyeh5jmw3tfhpxplw+v-v909m1bbh1qh1dyillim.jpg?_hv=2&w=600
+                        class="card-img-top" alt="Dres Tyrese Haliburtona(KING of the INDIANA)">
                     <div class="card-body">
-                        <h5 class="card-title">Košarkaška lopta BASKONIE</h5>
+                        <h5 class="card-title">Dres Tyrese Haliburtona(The HALIBAN)</h5>
                         <p class="card-text">
-                            Vježbajte brzinu šuta kao Markus Hauvard
+                            Tyrese Haliburton
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 150 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 550 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
@@ -221,221 +242,69 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-street-t-shirt-870946_360x.jpg?v=1697008372"
-                        class="card-img-top" alt="Majica za BASKET">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/denver-nuggets/nikola-joki%C4%87-denver-nuggets-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691773+u-b2a8si1gssgsq8fqaw3h+v-m5vsavf5lemu0y0tlham.jpg?_hv=2&w=600
+                        class="card-img-top" alt="Joker u MVP trci">
                     <div class="card-body">
-                        <h5 class="card-title">Majica za BASKET u svom gradu </h5>
+                        <h5 class="card-title">Joker u MVP trci </h5>
                         <p class="card-text">
-                            Sa ovom majicom pokidajte sve terene u gradu
+                            Nikola Jokić
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 200 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 700 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-basics-pack-4-397828_360x.jpg?v=1754024582"
-                        class="card-img-top" alt="Majica sa FINAL FOURA 2024">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/oklahoma-city-thunder/shai-gilgeous-alexander-oklahoma-city-thunder-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691770+u-jhigwl8q0c0l7ygkyuvs+v-h0airvxftdgtvrrf9tkr.jpg?_hv=2&w=600
+                        class="card-img-top" alt="SGA za pobedu">
                     <div class="card-body">
-                        <h5 class="card-title">Majica sa FINAL FOURA 2024</h5>
+                        <h5 class="card-title">SGA za pobedu</h5>
                         <p class="card-text">
-                            Naručite jednu od naših majica sa završnog turnira Evrolige
+                            Shai Gigleous-Alexander
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 600 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                      <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-olympiacos-pack-490596_360x.jpg?v=1754024584"
-                        class="card-img-top" alt="Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024</h5>
-                        <p class="card-text">
-                            Naručite majicu sa FINAL FOURA"OLIMPIJAKOS"
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 300 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
+            <div class="col-md-3" data-category="slika">
                 <div class="card" style="width: 18rem;">
                     <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-real-madrid-pack-507239_360x.jpg?v=1754024585"
-                        class="card-img-top" alt="Majica KK REAL MADRIDA SA FINAL FOURA 2024">
+                    <img src=https://images.footballfanatics.com/minnesota-timberwolves/anthony-edwards-minnesota-timberwolves-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691765+u-hsuzz3i0w65kpxwptvd0+v-nm3n9jan3t2ouialscpt.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ANT-MAN za istoriju">
                     <div class="card-body">
-                        <h5 class="card-title">Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024</h5>
+                        <h5 class="card-title">ANT-MAN za istoriju</h5>
                         <p class="card-text">
-                            Maručite majicu sa FINAL FOURA"REAL MADRID"
+                            Anthony Edwards
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 300 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 550 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-                <div class="row mt-5">
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-street-t-shirt-870946_360x.jpg?v=1697008372"
-                        class="card-img-top" alt="Majica za BASKET">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/miami-heat/dwyane-wade-miami-heat-autographed-deluxe-framed-16-x-20-alley-oop-to-lebron-james-photograph_ss5_p-200319538+u-77pu18tseukg3ls0m7od+v-otg3ylk3e6xuvth6r0st.jpg?_hv=2&w=600
+                        class="card-img-top" alt="LeBron,uništava obruč">
                     <div class="card-body">
-                        <h5 class="card-title">Majica za BASKET u svom gradu </h5>
+                        <h5 class="card-title">LeBron,uništava obruč</h5>
                         <p class="card-text">
-                            Sa ovom majicom pokidajte sve terene u gradu
+                            LeBron James
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 200 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                     <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-basics-pack-4-397828_360x.jpg?v=1754024582"
-                        class="card-img-top" alt="Majica sa FINAL FOURA 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica sa FINAL FOURA 2024</h5>
-                        <p class="card-text">
-                            Naručite jednu od naših majica sa završnog turnira Evrolige
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                      <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-olympiacos-pack-490596_360x.jpg?v=1754024584"
-                        class="card-img-top" alt="Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024</h5>
-                        <p class="card-text">
-                            Naručite majicu sa FINAL FOURA"OLIMPIJAKOS"
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 300 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                    <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-real-madrid-pack-507239_360x.jpg?v=1754024585"
-                        class="card-img-top" alt="Majica KK REAL MADRIDA SA FINAL FOURA 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024</h5>
-                        <p class="card-text">
-                            Maručite majicu sa FINAL FOURA"REAL MADRID"
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 300 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <div class="row mt-5">
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                     <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-street-t-shirt-870946_360x.jpg?v=1697008372"
-                        class="card-img-top" alt="Majica za BASKET">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica za BASKET u svom gradu </h5>
-                        <p class="card-text">
-                            Sa ovom majicom pokidajte sve terene u gradu
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 200 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                     <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-basics-pack-4-397828_360x.jpg?v=1754024582"
-                        class="card-img-top" alt="Majica sa FINAL FOURA 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica sa FINAL FOURA 2024</h5>
-                        <p class="card-text">
-                            Naručite jednu od naših majica sa završnog turnira Evrolige
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                      <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-olympiacos-pack-490596_360x.jpg?v=1754024584"
-                        class="card-img-top" alt="Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024</h5>
-                        <p class="card-text">
-                            Naručite majicu sa FINAL FOURA"OLIMPIJAKOS"
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 300 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="majice"></div>
-                <div class="card" style="width: 18rem;">
-                    <span class="badge bg-warning text-dark">MAJICE</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/files/fast-bundle-euroleague-final-four-24-real-madrid-pack-507239_360x.jpg?v=1754024585"
-                        class="card-img-top" alt="Majica KK REAL MADRIDA SA FINAL FOURA 2024">
-                    <div class="card-body">
-                        <h5 class="card-title">Majica KK OLIMPIJAKOSA SA FINAL FOURA 2024</h5>
-                        <p class="card-text">
-                            Maručite majicu sa FINAL FOURA"REAL MADRID"
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 300 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 600 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
@@ -443,221 +312,349 @@
             </div>
         </div>
         <div class="row mt-5">
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                    <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-basketball-return-582092_360x.jpg?v=1754024247"
-                        class="card-img-top" alt="Kućni koš u svom stanu ">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/golden-state-warriors/stephen-curry-golden-state-warriors-facsimile-signature-framed-16-x-20-stars-of-the-game-collage_pi5177000_ff_5177019-5990697b2a72a65f7ee1_full.jpg?_hv=2&w=600
+                        class="card-img-top" alt="CHEF for 3 points">
                     <div class="card-body">
-                        <h5 class="card-title">Kućni koš u svom stanu</h5>
+                        <h5 class="card-title">CHEF for 3 points </h5>
                         <p class="card-text">
-                            Ne vježbajte samo šut na treningu,kad možete i kući
+                            Steph Curry
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 800 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-highlight-42-acrylic-portable-basketball-hoop-903468_360x.jpg?v=1754024263"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/houston-rockets/kevin-durant-houston-rockets-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691746+u-cekhigb8bmmpdsmt0vov+v-cvle6ctm0kuhpwv9sckl.jpg?_hv=2&w=600
+                        class="card-img-top" alt="KD preko ruke,pogađa">
                     <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu</h5>
+                        <h5 class="card-title">KD preko ruke,pogađa</h5>
                         <p class="card-text">
-                            Vježbajte i ispred kuće
+                            Kevin Durant
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-youthkids-32-portable-basketball-hoop-483987_360x.jpg?v=1754024260"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu2">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/indiana-pacers/tyrese-haliburton-indiana-pacers-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691771+u-rxe84qa6aznwz5dlfqc4+v-njrgugy4rg5mm2ezfatp.jpg?_hv=2&w=600
+                        class="card-img-top" alt="HALIBAN,za finale">
                     <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu2</h5>
+                        <h5 class="card-title">HALIBAN,za finale</h5>
                         <p class="card-text">
-                            Vježbajte i ispred kuće2
+                            Tyrse Haliburton
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 450 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                    <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-gametime-series-48-portable-basketball-hoop-889320_360x.jpg?v=1754024264"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu3">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/milwaukee-bucks/giannis-antetokounmpo-milwaukee-bucks-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691759+u-g5ju4m3jomryogtabsze+v-fx1pgiqmaj5vigoghgyp.jpg?_hv=2&w=600
+                        class="card-img-top" alt="GIANNIS,za vodstvo">
                     <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu3</h5>
+                        <h5 class="card-title">GIANNIS,za vodstvo</h5>
                         <p class="card-text">
-                            Vježbajte i ispred kuće3
+                            Giannis Antetokounpo
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <div class="row mt-5">
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
-                <div class="card" style="width: 18rem;">
-                    <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-basketball-return-582092_360x.jpg?v=1754024247"
-                        class="card-img-top" alt="Kućni koš u svom stanu ">
-                    <div class="card-body">
-                        <h5 class="card-title">Kućni koš u svom stanu</h5>
-                        <p class="card-text">
-                            Ne vježbajte samo šut na treningu,kad možete i kući
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
-                <div class="card" style="width: 18rem;">
-                     <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-highlight-42-acrylic-portable-basketball-hoop-903468_360x.jpg?v=1754024263"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu">
-                    <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu</h5>
-                        <p class="card-text">
-                            Vježbajte i ispred kuće
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
-                <div class="card" style="width: 18rem;">
-                     <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-youthkids-32-portable-basketball-hoop-483987_360x.jpg?v=1754024260"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu2">
-                    <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu2</h5>
-                        <p class="card-text">
-                            Vježbajte i ispred kuće2
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
-                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
-                <div class="card" style="width: 18rem;">
-                    <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-gametime-series-48-portable-basketball-hoop-889320_360x.jpg?v=1754024264"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu3">
-                    <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu3</h5>
-                        <p class="card-text">
-                            Vježbajte i ispred kuće3
-                        </p>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-                <div class="row mt-5">
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+        <div class="row mt-5">
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                    <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-basketball-return-582092_360x.jpg?v=1754024247"
-                        class="card-img-top" alt="Kućni koš u svom stanu ">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/philadelphia-76ers/tyrese-maxey-philadelphia-76ers-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691772+u-lwshq0gqpoet0mdrqjmp+v-myfmzsdrooa2bjg7c94a.jpg?_hv=2&w=600
+                        class="card-img-top" alt="MAXEY za ALL STAR">
                     <div class="card-body">
-                        <h5 class="card-title">Kućni koš u svom stanu</h5>
+                        <h5 class="card-title">MAXEY za ALL STAR</h5>
                         <p class="card-text">
-                            Ne vježbajte samo šut na treningu,kad možete i kući
+                            Tyrese Maxey
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-highlight-42-acrylic-portable-basketball-hoop-903468_360x.jpg?v=1754024263"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/phoenix-suns/devin-booker-phoenix-suns-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691748+u-w3yn0zcuwxcv0px1juxa+v-cuwi4ecliouhwzkhyam2.jpg?_hv=2&w=600
+                        class="card-img-top" alt="DEVIN for three points">
                     <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu</h5>
+                        <h5 class="card-title">DEVIN for three points</h5>
                         <p class="card-text">
-                            Vježbajte i ispred kuće
+                            Devin Booker
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                     <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-youthkids-32-portable-basketball-hoop-483987_360x.jpg?v=1754024260"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu2">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/portland-trail-blazers/damian-lillard-portland-trail-blazers-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691766+u-proedyf1xuwjlbst3fcn+v-kf18vwbfzcuvh11poqbz.jpg?_hv=2&w=600
+                        class="card-img-top" alt="Damian za DAME TIME">
                     <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu2</h5>
+                        <h5 class="card-title">Damian za DAME TIME</h5>
                         <p class="card-text">
-                            Vježbajte i ispred kuće2
+                            Damian Lillard
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 450 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-3">
-                <div class="col-md-3" data-category="koševi"></div>
+            <div class="col-md-3" data-category="slike">
                 <div class="card" style="width: 18rem;">
-                    <span class="badge bg-primary text-white">KOŠEVI</span>
-                    <img src="https://spalding-basketball.com/cdn/shop/products/spalding-gametime-series-48-portable-basketball-hoop-889320_360x.jpg?v=1754024264"
-                        class="card-img-top" alt="Postavite koš u svom dvorištu3">
+                    <span class="badge bg-warning text-dark">SLIKE</span>
+                    <img src=https://images.footballfanatics.com/san-antonio-spurs/victor-wembanyama-san-antonio-spurs-facsimile-signature-framed-11-x-14-spotlight-photograph_ss5_p-203691760+u-8aj8qjuviihit0e5fvpg+v-siw4ceguxtiatwpfu9hx.jpg?_hv=2&w=600
+                        class="card-img-top" alt="WEMBY for the win">
                     <div class="card-body">
-                        <h5 class="card-title">Postavite koš u svom dvorištu3</h5>
+                        <h5 class="card-title">WEMBY for the win</h5>
                         <p class="card-text">
-                            Vježbajte i ispred kuće3
+                            Victor Wembanyama
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <span class="fw-bold text-primary">Cijena: 100 KM</span>
+                            <span class="fw-bold text-primary">Cijena: 700 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL-STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-2026-wilson-all-star-2026-basketball_ss5_p-203603466+u-wqal7ok7otlqhvlfzlho+v-tqrfjih3bzqx6tp3wxla.jpeg?_hv=2&w=600
+                        class="card-img-top" alt="Kupite ALL STAR loptu ">
+                    <div class="card-body">
+                        <h5 class="card-title">Kupite ALL STAR loptu</h5>
+                        <p class="card-text">
+                            ALL STAR lopta
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL-STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-all-star-east-mitchell-and-ness-authentic-jersey-michael-jordan-1996_ss5_p-203156985+u-vynbvimuvvh5exf9qqlf+v-nnlt6u683jfamt9gcg71.jpg?_hv=2&w=600
+                        class="card-img-top" alt="Michael Jordan dres 1993">
+                    <div class="card-body">
+                        <h5 class="card-title">Michael Jordan dres 1993</h5>
+                        <p class="card-text">
+                            ALL STAR Michael Jordan
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 1000 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL-STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-nike-all-star-practice-hoodie-college-navy-mens_ss5_p-203286516+u-ia3k84okmw3suhtgkpkm+v-avbzjusinq89v8b9ylml.png?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR duks">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR duks</h5>
+                        <p class="card-text">
+                            ALL STAR duks
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 500 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL-STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-all-star-east-mitchell-and-ness-swingman-jersey-vince-carter-2005_ss5_p-203165155+u-iqde0qnjm5ctdcu14zw3+v-l4d6msj32jsoibcgokjh.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR Alen Iverson">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR Vince Carter</h5>
+                        <p class="card-text">
+                            Vince Carter
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 400 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-all-star-east-mitchell-and-ness-authentic-jersey-michael-jordan-1988_ss5_p-203156986+u-zd9lkrbdxa4ipys2dl85+v-5awwtpw4z1x06ef2iu19.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR dres 1988 ">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR dres 1988 </h5>
+                        <p class="card-text">
+                            ALL STAR Michael Jordan
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 900 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-nike-all-star-max-90%C2%A0t-shirt-blue-mens_ss5_p-203286522+u-1nrvwykdrfehfde1jbpd+v-cc23brbetfxx4cowdgj2.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR majica 2026">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR majica 2026</h5>
+                        <p class="card-text">
+                            ALL STAR MAJICA
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 300 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/mens-mitchell-and-ness-nikola-jokic-black-2016-nba-rising-stars-challenge-hardwood-classics-swingman-jersey_ss5_p-200351928+u-ow0sconhxo7qyvjz90p1+v-nrsltaq28sndevhpcj93.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR dres JOKERA">
+                    <div class="card-body">
+                        <h5 class="card-title">"ALL STAR dres JOKERA</h5>
+                        <p class="card-text">
+                            ALL STAR Nikola Jokić
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 900 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-nike-all-star-max90-wordmark-t-shirt-sail-mens_ss5_p-203286517+u-ql1etad1a88yycvp7zhw+v-rs6goddtphuzb4vfupll.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR majica 2026">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR majica 2026</h5>
+                        <p class="card-text">
+                            ALL STAR MAJICA
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 400 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-all-star-west-mitchell-and-ness-authentic-jersey-magic-johnson-1991_ss5_p-203157309+u-vmzrwezd8d8je3gvtyuo+v-8vyjawymurgatvxijxa5.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR dres MAGICA">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR dres MAGICA</h5>
+                        <p class="card-text">
+                            Magic Johnson
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 400 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL-STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/logo-gear/nba-2004-west-shaquille-oneal-authentic-all-star-jersey-by-mitchell-and-ness-white-mens_ss5_p-11901354+u-icuawqqy6mamizr69cr1+v-xs40eqlotrkg0r6x6hqz.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR dres ONEAL">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR dres ONEAL</h5>
+                        <p class="card-text">
+                            ALL STAR Shaquille Oneal
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 600 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL-STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/eastern-conference/mens-mitchell-and-ness-vince-carter-white-eastern-conference-2003-all-star-game-swingman-jersey_pi5292000_ff_5292686-ee87cb6206bdffb4529c_full.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR dres VINCE CARTERA">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR dres CARTERA</h5>
+                        <p class="card-text">
+                            Vince Carter
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 600 KM</span>
+                            <a href="#" class="btn btn-primary">Dodaj u korpu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3" data-category="allstar">
+                <div class="card" style="width: 18rem;">
+                    <span class="badge bg-primary text-white">ALL-STAR-STVARI</span>
+                    <img src=https://images.footballfanatics.com/eastern-conference/mens-mitchell-and-ness-vince-carter-white-eastern-conference-2003-all-star-game-swingman-jersey_pi5292000_ff_5292686-ee87cb6206bdffb4529c_full.jpg?_hv=2&w=600
+                        class="card-img-top" alt="ALL STAR dres VINCE CARTERA">
+                    <div class="card-body">
+                        <h5 class="card-title">ALL STAR dres CARTERA</h5>
+                        <p class="card-text">
+                            Vince Carter
+                        </p>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="fw-bold text-primary">Cijena: 600 KM</span>
                             <a href="#" class="btn btn-primary">Dodaj u korpu</a>
                         </div>
                     </div>
@@ -665,9 +662,6 @@
             </div>
         </div>
     </div>
-
-
-
     <!-- FOOTER -->
     <div class="footer mt-5">
         <div class="container">
@@ -730,4 +724,72 @@
     </div>
 </body>
 
+
+<script>
+// Sve kartice spremamo u niz
+let allProducts = [];
+
+// Kad se stranica učita
+document.addEventListener('DOMContentLoaded', function() {
+    const productsContainer = document.getElementById('productsContainer');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const sortPrice = document.getElementById('sortPrice');
+
+    // Uzimamo sve postojeće kartice iz HTML-a i spremamo ih
+    function collectProducts() {
+        allProducts = Array.from(document.querySelectorAll('.col-md-3[data-category]'));
+        
+        // Premještamo ih u novi kontejner
+        allProducts.forEach(card => {
+            productsContainer.appendChild(card);
+        });
+    }
+
+    // Funkcija za filtriranje i sortiranje
+    function filterAndSortProducts() {
+        let filtered = allProducts;
+
+        // Filtriranje po kategoriji
+        const selectedCategory = categoryFilter.value;
+        if (selectedCategory !== 'all') {
+            filtered = allProducts.filter(card => 
+                card.getAttribute('data-category') === selectedCategory
+            );
+        }
+
+        // Sortiranje po cijeni
+        const sortValue = sortPrice.value;
+        
+        if (sortValue !== 'default') {
+            filtered.sort((a, b) => {
+                const priceA = parseInt(a.querySelector('.fw-bold.text-primary').textContent.match(/\d+/)[0]);
+                const priceB = parseInt(b.querySelector('.fw-bold.text-primary').textContent.match(/\d+/)[0]);
+                
+                if (sortValue === 'price-low') {
+                    return priceA - priceB;
+                } else if (sortValue === 'price-high') {
+                    return priceB - priceA;
+                }
+                return 0;
+            });
+        }
+
+        // Prikazujemo filtrirane i sortirane kartice
+        productsContainer.innerHTML = '';
+        filtered.forEach(card => {
+            productsContainer.appendChild(card);
+        });
+    }
+
+    // Pokrećemo prikupljanje kartica
+    collectProducts();
+
+    // Event listeneri
+    categoryFilter.addEventListener('change', filterAndSortProducts);
+    sortPrice.addEventListener('change', filterAndSortProducts);
+
+    // Početni prikaz
+    filterAndSortProducts();
+});
+</script>
 </html>
